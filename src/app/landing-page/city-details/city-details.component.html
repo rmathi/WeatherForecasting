@@ -1,0 +1,15 @@
+<div class="card" *ngIf="city">
+  <div class="card-header">
+    <p class="current-date">{{currentDate | date:'HH:mm:ss'}}</p>
+    <p class="city-name">{{city.name}}</p>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item"><label>Country:</label> {{city.country}}</li>
+      <li class="list-group-item"><label>Population :</label> {{city.population}}</li>
+      <li class="list-group-item"><label>Sunrise :</label> {{city.sunrise | date: 'fullTime'}}</li>
+      <li class="list-group-item"><label>Sunset :</label> {{city.sunset | date: 'fullTime'}}</li>
+      <li class="list-group-item"><label>Timezone :</label> {{city.timezone | date: 'fullTime'}}</li>
+    </ul>
+  </div>
+</div>

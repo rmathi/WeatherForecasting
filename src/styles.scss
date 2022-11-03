@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background: url("/assets/bg.jpeg") repeat center;
+  height:100%;
+  background-size: cover;
+}
+ul.list-group {
+  .list-group-item {
+    color: #000000;
+    label {
+      font-weight: 600;
+    }
+  }
+}
+.mat-tab-label-container{
+  background: #2e2e2e;
+  .mat-tab-label{
+     color: #fff;
+  }
+  .mat-tab-label:focus:not(.mat-tab-disabled) {
+    color: orange;
+  }
+}

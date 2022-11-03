@@ -1,0 +1,32 @@
+<!--Select dropdown-->
+<nav class="navbar navbar-light search-field">
+  <div class="container">
+    <a class="navbar-brand">Search by Cities Name:</a>
+    <form class="d-flex city-search">
+      <select class="form-select" aria-label="Default select example" (change)="onChange($event)">
+        <option selected>Select</option>
+        <option value="Birmingham">Birmingham</option>
+        <option value="London">London</option>
+        <option value="Cardiff">Cardiff</option>
+      </select>
+    </form>
+  </div>
+</nav>
+<!--Select dropdown end-->
+<section class="container mt-2">
+  <div class="weather-section">
+      <h3>Welcome to Weather Forecast</h3>
+      <p>Weather forecasts, nowcasts and history in a fast and elegant way</p>
+      <!--weather details/prediction-->
+     <div class="row mt-4">
+        <div class="col-3">
+          <app-city-details [city]="cityData"></app-city-details>
+        </div>
+        <div class="col-9" *ngIf="weatherLists">
+          <app-weather-prediction [weatherLists]="weatherLists"></app-weather-prediction>
+        </div>
+      </div>
+    <!--weather details/prediction End-->
+  </div>
+</section>
+

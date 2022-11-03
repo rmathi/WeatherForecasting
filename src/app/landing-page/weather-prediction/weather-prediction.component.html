@@ -1,0 +1,26 @@
+<div class="card" *ngIf="weatherLists">
+  <div class="card-header">
+    Weather prediction - 5 day
+  </div>
+  <div class="card-body">
+    <mat-tab-group >
+      <div *ngFor="let item of weatherForecastData; let index = index">
+        <ng-container *ngIf="index> 0">
+          <mat-tab [label]="item.date">
+            <div class="weather-card col-3" *ngFor="let itemList of item.list">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-time"><label>Time:</label> {{itemList[0].dt_txt | date:'shortTime'}}</li>
+                <li class="list-group-item"><label>Humidity:</label> {{itemList[0].main.humidity}}%</li>
+                <li class="list-group-item"><label>Temp:</label> {{kToC(itemList[0].main.temp)}}</li>
+                <li class="list-group-item"><label>Feels Like:</label> {{kToC(itemList[0].main.feels_like)}}</li>
+                <li class="list-group-item"><label>Wind Speed:</label> {{itemList[0].wind.speed}}</li>
+                <li class="list-group-item"> <img src="http://openweathermap.org/img/w/{{itemList[0].weather[0].icon}}.png"> {{itemList[0].weather[0].description}}</li>
+              </ul>
+            </div>
+          </mat-tab>
+        </ng-container>
+      </div>
+    </mat-tab-group>
+  </div>
+</div>
+

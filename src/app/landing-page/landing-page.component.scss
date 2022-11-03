@@ -1,0 +1,28 @@
+.weather-section{
+  background-color: rgba(255, 255, 255, 0.6);
+  min-height: 30rem;
+  border-radius: .2rem;
+  padding: 1rem;
+}
+.search-field{
+  background: #000;
+  padding: .7rem .4rem;
+}
+
+.navbar.investment-navbar {
+  padding: .3rem .3rem;
+  border-radius: 5px;
+}
+.navbar-light{
+  .city-search{
+    width: 100%;
+    padding-bottom: 20px;
+    select{
+      min-height: 50px;
+    }
+  }
+  .navbar-brand{
+    color: #fff;
+    padding-bottom: .5rem;
+  }
+}
